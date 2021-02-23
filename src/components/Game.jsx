@@ -33,7 +33,7 @@ export default function Game() {
       <h3 className="title"> Up for some Tic Tac Toe?</h3>
       <Board squares={board} onClick={handleClick}></Board>
       <div>
-        <p>{winner ? 'Winner: ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
+        <p className="next-player">{winner ? 'Winner: ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
         {renderMoves()}
       </div>
     </div>

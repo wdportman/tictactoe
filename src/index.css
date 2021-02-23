@@ -60,3 +60,7 @@ body {
 .title {
   font-weight: 600
 }
+
+.next-player {
+  text-align: center;
+}

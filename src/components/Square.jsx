@@ -4,7 +4,9 @@ export default function Square(props) {
 
   const {onClick, value} = props;
 
-  <button onClick = {onClick}>
+  return (
+    <button onClick = {onClick}>
     {value}
   </button>
+  )
 };

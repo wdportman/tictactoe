@@ -1,9 +1,6 @@
-import './App.css';
+import React from 'react';
+import Game from '/components/Game';
 
-function App() {
-  return (
-    <div>Hi</div>
-  );
-}
-
-export default App;
+export default function App() {
+  <Game />;
+};

@@ -2,11 +2,6 @@ import React, {useState} from 'react';
 import Board from './Board';
 import { usePlayGame } from '../hooks/usePlayGame';
 
-const styles = {
-  width: '200px',
-  margin: '20px auto'
-};
-
 export default function Game() {
 
   const {calculateWinner} = usePlayGame();
@@ -29,21 +24,17 @@ export default function Game() {
     setXIsNext(!xIsNext);
   };
 
-  const jumpTo = () => {
-
-  };
-
   const renderMoves = () => {
     return <button onClick={() => setBoard(Array(9).fill(null))}>New Game</button>
   };
 
   return (
-    <>
+    <div className="game">
       <Board squares={board} onClick={handleClick}></Board>
-      <div style={styles}>
+      <div>
         <p>{winner ? 'Winner: ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
         {renderMoves()}
       </div>
-    </>
+    </div>
   )
 };

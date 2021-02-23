@@ -25,11 +25,12 @@ export default function Game() {
   };
 
   const renderMoves = () => {
-    return <button onClick={() => setBoard(Array(9).fill(null))}>New Game</button>
+    return <button className="button" onClick={() => setBoard(Array(9).fill(null))}>New Game</button>
   };
 
   return (
     <div className="game">
+      <h3 className="title"> Up for some Tic Tac Toe?</h3>
       <Board squares={board} onClick={handleClick}></Board>
       <div>
         <p>{winner ? 'Winner: ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
